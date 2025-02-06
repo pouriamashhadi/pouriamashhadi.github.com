@@ -45,6 +45,7 @@ let isLoading= false;
 
 document.addEventListener("touchstart",(e)=>{
 
+    e.preventDefault();
     if(iSscroll0==false)
         return false;
     
@@ -62,7 +63,6 @@ document.addEventListener("touchstart",(e)=>{
 
 document.addEventListener("touchmove",(e)=>{
 
-    if (e.scale !== 1) return;
     e.preventDefault();
 
     if(iSscroll0==false)
@@ -119,6 +119,8 @@ document.addEventListener("touchmove",(e)=>{
 
 
 document.addEventListener("touchend",(e)=>{
+    
+    e.preventDefault();
     if(iSscroll0==false)
         return false;
     
