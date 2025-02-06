@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Arad";
+    src: url("../assets/fonts/Arad-BoldDots2.woff2") format("woff2");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Arad";
+    src: url("../assets/fonts/Arad-ExtraBoldDots2.woff2") format("woff2");
+    font-weight: 800; /* Extra Bold */
+  }
+  
+  @font-face {
+    font-family: "Arad";
+    src: url("../assets/fonts/Arad-ExtraLightDots2.woff2") format("woff2");
+    font-weight: 200; /* Extra Light */
+  }
+  
+  @font-face {
+    font-family: "Arad";
+    src: url("../assets/fonts/Arad-LightDots2.woff2") format("woff2");
+    font-weight: 300; /* Light */
+  }
+  
+  @font-face {
+    font-family: "Arad";
+    src: url("../assets/fonts/Arad-MediumDots2.woff2") format("woff2");
+    font-weight: 500; /* Medium */
+  }
+  
+  @font-face {
+    font-family: "Arad";
+    src: url("../assets/fonts/Arad-RegularDots2.woff2") format("woff2");
+    font-weight: normal; /* Regular */
+  }
+  
+  @font-face {
+    font-family: "Arad";
+    src: url("../assets/fonts/Arad-SemiBoldDots2.woff2") format("woff2");
+    font-weight: 600; /* Semi Bold */
+  }
+  
+  @font-face {
+    font-family: "Arad";
+    src: url("../assets/fonts/Arad-ThinDots2.woff2") format("woff2");
+    font-weight: 100; /* Thin */
+  }
+  

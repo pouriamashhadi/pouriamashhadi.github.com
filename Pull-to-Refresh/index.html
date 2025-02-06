@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull to Refresh</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">  
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box-refresh hidden">
+        <div class="box--icon-refresh">
+            <div class="icon-refresh">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_12_282)">
+                    <path d="M19.933 13.041C19.7442 14.481 19.1669 15.8423 18.2632 16.9792C17.3594 18.116 16.1633 18.9854 14.803 19.494C13.4427 20.0027 11.9696 20.1315 10.5417 19.8666C9.11374 19.6017 7.78486 18.9531 6.69755 17.9903C5.61024 17.0276 4.80551 15.787 4.36967 14.4016C3.93383 13.0163 3.88332 11.5385 4.22355 10.1266C4.56379 8.71472 5.28194 7.4221 6.30097 6.38736C7.32001 5.35261 8.6015 4.61478 10.008 4.253C13.907 3.253 17.943 5.26 19.433 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 4V9H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_12_282">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </div>
+
+            <div class="icon-check">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_12_267)">
+                    <path d="M6.66669 16L13.3334 22.6667L26.6667 9.33333" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_12_267">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </div>
+           
+        </div>
+    </div>
+    <section class="app">
+        <header>
+            <div class="project-title load">
+                Pull-to-Refresh
+            </div>
+            <div class="project-icons load">
+                <div>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24_1451)">
+                        <path d="M26.6666 5.33334L23.9999 24.6667L15.9999 27.3333L7.99992 24.6667L5.33325 5.33334H26.6666Z" stroke="#81B8DA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.3333 10.6667H20.6666L14.6666 16H19.9999L19.3333 20.6667L15.9999 21.6667L12.6666 20.6667L12.5333 20" stroke="#81B8DA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_24_1451">
+                        <rect width="32" height="32" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>   
+                </div>
+                <div>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24_1447)">
+                        <path d="M26.6666 5.33334L23.9999 24.6667L15.9999 27.3333L7.99992 24.6667L5.33325 5.33334H26.6666Z" stroke="#F3632E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20.6666 10.6667H11.3333L11.9999 16H19.9999L19.3333 20.6667L15.9999 21.6667L12.6666 20.6667L12.5333 20" stroke="#F3632E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_24_1447">
+                        <rect width="32" height="32" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        
+                </div>
+                <div>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24_1455)">
+                        <path d="M26.6666 5.33334L23.9999 24.6667L15.9999 27.3333L7.99992 24.6667L5.33325 5.33334H26.6666Z" stroke="#F7D479" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 10.6667H14V21.3333L11.3333 20" stroke="#F7D479" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 10.6667H18.6667C18.4899 10.6667 18.3203 10.7369 18.1953 10.8619C18.0702 10.987 18 11.1565 18 11.3333V15.3333C18 15.5101 18.0702 15.6797 18.1953 15.8047C18.3203 15.9298 18.4899 16 18.6667 16H20.564C20.6594 16 20.7537 16.0205 20.8406 16.0601C20.9274 16.0997 21.0047 16.1575 21.0673 16.2295C21.1298 16.3016 21.1762 16.3862 21.2032 16.4777C21.2303 16.5693 21.2374 16.6655 21.224 16.76L20.6667 20.6667L18 21.3333" stroke="#F7D479" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_24_1455">
+                        <rect width="32" height="32" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                </div>
+            </div>  
+        </header>
+
+        <div class="project-subtitle load">
+            A Fast and Stylish Refresh Feature for Your Website !
+        </div>
+        <div class="project-description load">
+            This feature allows you to easily reload the content of a page by simply pulling it down! It's a smooth and beautiful user experience that can make your website look more professional and engaging.
+        </div>
+
+        <div class="project-languages">
+            <span class="languages-html load">HTML</span>
+            <span class="languages-css load">Css</span>
+            <span class="languages-js load">JavaScript</span>
+        </div>
+
+        <div class="box box-yellow load">
+            <span>
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.49542 4.89334L1.24209 5.51001L1.16675 5.52534C1.05271 5.55562 0.948751 5.61562 0.865483 5.69921C0.782214 5.78281 0.722624 5.887 0.692796 6.00116C0.662969 6.11532 0.663973 6.23535 0.695706 6.34899C0.72744 6.46263 0.788766 6.56582 0.873421 6.64801L3.95475 9.64734L3.22809 13.884L3.21942 13.9573C3.21244 14.0753 3.23693 14.193 3.29039 14.2983C3.34384 14.4037 3.42434 14.493 3.52365 14.557C3.62295 14.621 3.73748 14.6575 3.85552 14.6627C3.97356 14.668 4.09086 14.6417 4.19542 14.5867L7.99942 12.5867L11.7948 14.5867L11.8614 14.6173C11.9715 14.6607 12.0911 14.674 12.2079 14.6558C12.3248 14.6377 12.4347 14.5888 12.5265 14.5142C12.6182 14.4395 12.6885 14.3418 12.73 14.2311C12.7715 14.1204 12.7828 14.0006 12.7628 13.884L12.0354 9.64734L15.1181 6.64734L15.1701 6.59068C15.2444 6.49919 15.2931 6.38964 15.3112 6.27321C15.3294 6.15677 15.3164 6.03759 15.2735 5.92783C15.2306 5.81807 15.1594 5.72163 15.0671 5.64835C14.9748 5.57507 14.8647 5.52757 14.7481 5.51068L10.4948 4.89334L8.59342 1.04001C8.53841 0.928366 8.45323 0.834353 8.34755 0.768612C8.24186 0.702872 8.11989 0.66803 7.99542 0.66803C7.87096 0.66803 7.74898 0.702872 7.6433 0.768612C7.53761 0.834353 7.45244 0.928366 7.39742 1.04001L5.49542 4.89334Z" fill="#F7D479"/>
+                    </svg>
+                    
+            </span>
+            To test this feature, just pull the page down and release it to reload the content!
+        </div>
+        <div class="box box-red load">
+            Watch the video tutorial on
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_24_1478)">
+                <path d="M12.0001 2C12.4378 2 12.8713 2.08622 13.2757 2.25373C13.6801 2.42125 14.0476 2.66678 14.3571 2.97631C14.6666 3.28584 14.9122 3.6533 15.0797 4.05772C15.2472 4.46214 15.3334 4.89559 15.3334 5.33333V10.6667C15.3334 11.1044 15.2472 11.5379 15.0797 11.9423C14.9122 12.3467 14.6666 12.7142 14.3571 13.0237C14.0476 13.3332 13.6801 13.5788 13.2757 13.7463C12.8713 13.9138 12.4378 14 12.0001 14H4.00008C3.56234 14 3.12889 13.9138 2.72447 13.7463C2.32005 13.5788 1.95259 13.3332 1.64306 13.0237C1.01794 12.3986 0.666748 11.5507 0.666748 10.6667V5.33333C0.666748 4.44928 1.01794 3.60143 1.64306 2.97631C2.26818 2.35119 3.11603 2 4.00008 2H12.0001ZM6.00008 6V10C6.00017 10.1179 6.03153 10.2337 6.09096 10.3355C6.15038 10.4373 6.23574 10.5216 6.33834 10.5796C6.44094 10.6377 6.55711 10.6675 6.675 10.6661C6.79289 10.6646 6.90828 10.6319 7.00941 10.5713L10.3427 8.57133C10.4413 8.51206 10.5229 8.4283 10.5795 8.32819C10.6361 8.22807 10.6659 8.11502 10.6659 8C10.6659 7.88498 10.6361 7.77193 10.5795 7.67181C10.5229 7.5717 10.4413 7.48794 10.3427 7.42867L7.00941 5.42867C6.90828 5.36807 6.79289 5.33537 6.675 5.33391C6.55711 5.33245 6.44094 5.36228 6.33834 5.42036C6.23574 5.47844 6.15038 5.56268 6.09096 5.66451C6.03153 5.76634 6.00017 5.8821 6.00008 6Z" fill="#FF0000"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_24_1478">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                </span>
+            <span>YouTube</span> to learn how to build this feature.
+        </div>
+        <div class="box box-black load">
+            Access the source code on
+            <span><svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.54329 0.399991C3.07062 0.324657 3.80995 0.496658 4.76529 1.04399L4.94662 1.15132L5.05329 1.21799L5.31795 1.16266C6.32715 0.967649 7.36257 0.949603 8.37795 1.10932L8.68195 1.16266L8.94595 1.21799L9.05329 1.15132C9.97662 0.591324 10.7113 0.371324 11.268 0.385991L11.3773 0.391324L11.4753 0.402658L11.526 0.411991L11.5593 0.419324L11.6553 0.450658C11.8125 0.515629 11.9389 0.638214 12.0086 0.793324C12.2814 1.40113 12.3733 2.07466 12.2733 2.73332L12.242 2.91132L12.2113 3.04199L12.2933 3.15066C12.676 3.68066 12.9133 4.30266 12.98 4.95532L12.9953 5.15199L13 5.33332C13 7.90332 11.894 9.25532 9.90395 9.78666L9.74062 9.82732L9.65262 9.84666L9.66195 9.95399L9.66729 10.0587L9.66995 10.302L9.66862 10.444L9.66662 13C9.6666 13.1633 9.60665 13.3209 9.49814 13.4429C9.38964 13.5649 9.24012 13.6429 9.07795 13.662L8.99995 13.6667H4.99995C4.83666 13.6666 4.67906 13.6067 4.55704 13.4982C4.43501 13.3897 4.35706 13.2402 4.33795 13.078L4.33329 13V12.5107C3.12129 12.684 2.31329 12.228 1.59329 11.2587L1.23662 10.748C1.04995 10.484 0.933286 10.362 0.843952 10.3187L0.811952 10.306C0.646893 10.2524 0.509257 10.1365 0.428297 9.98295C0.347337 9.82943 0.329436 9.65039 0.378398 9.48389C0.427361 9.31738 0.539326 9.17653 0.690498 9.09127C0.841671 9.00602 1.02013 8.98308 1.18795 9.02732C1.61595 9.15266 1.90395 9.40599 2.23462 9.85332L2.59329 10.366C3.09995 11.0853 3.49995 11.3387 4.33262 11.16L4.33329 10.708L4.32129 10.596C4.3016 10.4136 4.29692 10.2298 4.30729 10.0467L4.31862 9.92332L4.33129 9.84332L4.25929 9.82732C2.27529 9.35399 1.12395 8.11199 1.00929 5.73466L1.00262 5.52799L0.999952 5.33332C1.00072 4.61104 1.211 3.90449 1.60529 3.29932L1.70662 3.15132L1.78795 3.04266L1.75795 2.91199C1.63776 2.32637 1.67106 1.71961 1.85462 1.15066L1.92129 0.962657L1.99195 0.793991C2.06155 0.639004 2.18769 0.516436 2.34462 0.451324L2.44062 0.419991L2.54329 0.399991Z" fill="#686868"/>
+                </svg>
+                </span>
+            <span>GitHub</span> for customization and implementation.
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="btn btn-youtebe load">
+                <span class="btn-title">YouTube</span>
+                <span class="btn-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24_1492)">
+                        <path d="M8.00008 4H4.00008C3.64646 4 3.30732 4.14048 3.05727 4.39052C2.80722 4.64057 2.66675 4.97971 2.66675 5.33333V12C2.66675 12.3536 2.80722 12.6928 3.05727 12.9428C3.30732 13.1929 3.64646 13.3333 4.00008 13.3333H10.6667C11.0204 13.3333 11.3595 13.1929 11.6096 12.9428C11.8596 12.6928 12.0001 12.3536 12.0001 12V8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.33325 8.66669L13.3333 2.66669" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 2.66669H13.3333V6.00002" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_24_1492">
+                        <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        
+                </span>
+            </a>
+            <a  href="#" class="btn btn-github load">
+                <span class="btn-title">GitHub</span>
+                <span class="btn-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24_1492)">
+                        <path d="M8.00008 4H4.00008C3.64646 4 3.30732 4.14048 3.05727 4.39052C2.80722 4.64057 2.66675 4.97971 2.66675 5.33333V12C2.66675 12.3536 2.80722 12.6928 3.05727 12.9428C3.30732 13.1929 3.64646 13.3333 4.00008 13.3333H10.6667C11.0204 13.3333 11.3595 13.1929 11.6096 12.9428C11.8596 12.6928 12.0001 12.3536 12.0001 12V8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.33325 8.66669L13.3333 2.66669" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 2.66669H13.3333V6.00002" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_24_1492">
+                        <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        
+                </span>
+            </a>
+        </div>
+        <div class="social-list load">
+            <div class="text">
+                You can follow me on social media as well.
+            </div>
+
+            <div class="list-icon">
+                <a href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_1513)">
+                    <path d="M2.66675 5.33335C2.66675 4.62611 2.9477 3.94783 3.4478 3.44774C3.94789 2.94764 4.62617 2.66669 5.33341 2.66669H10.6667C11.374 2.66669 12.0523 2.94764 12.5524 3.44774C13.0525 3.94783 13.3334 4.62611 13.3334 5.33335V10.6667C13.3334 11.3739 13.0525 12.0522 12.5524 12.5523C12.0523 13.0524 11.374 13.3334 10.6667 13.3334H5.33341C4.62617 13.3334 3.94789 13.0524 3.4478 12.5523C2.9477 12.0522 2.66675 11.3739 2.66675 10.6667V5.33335Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 8C6 8.53043 6.21071 9.03914 6.58579 9.41421C6.96086 9.78929 7.46957 10 8 10C8.53043 10 9.03914 9.78929 9.41421 9.41421C9.78929 9.03914 10 8.53043 10 8C10 7.46957 9.78929 6.96086 9.41421 6.58579C9.03914 6.21071 8.53043 6 8 6C7.46957 6 6.96086 6.21071 6.58579 6.58579C6.21071 6.96086 6 7.46957 6 8Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11 5V5.00667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_24_1513">
+                    <rect width="16" height="16" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </a>
+                <a href="#">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_24_1506)">
+                            <path d="M5.33325 7.33331V10.6666" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.33325 5.33331V5.33998" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 10.6666V7.33331" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.6667 10.6666V8.66665C10.6667 8.31302 10.5262 7.97389 10.2761 7.72384C10.0261 7.47379 9.68696 7.33331 9.33333 7.33331C8.97971 7.33331 8.64057 7.47379 8.39052 7.72384C8.14048 7.97389 8 8.31302 8 8.66665" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 4.66667C2 3.95942 2.28095 3.28115 2.78105 2.78105C3.28115 2.28095 3.95942 2 4.66667 2H11.3333C12.0406 2 12.7189 2.28095 13.219 2.78105C13.719 3.28115 14 3.95942 14 4.66667V11.3333C14 12.0406 13.719 12.7189 13.219 13.219C12.7189 13.719 12.0406 14 11.3333 14H4.66667C3.95942 14 3.28115 13.719 2.78105 13.219C2.28095 12.7189 2 12.0406 2 11.3333V4.66667Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_24_1506">
+                            <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+               </a>
+               <a href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_1503)">
+                    <path d="M10 6.66669L7.33333 9.33335L11.3333 13.3334L14 2.66669L2 7.33335L4.66667 8.66669L6 12.6667L8 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_24_1503">
+                    <rect width="16" height="16" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+               </a>
+            </div>
+        </div>
+        <div class="copyright-text load">
+            Developed with
+            <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_24_1519)">
+                <path d="M4.07108 1.79319C4.58736 1.70523 5.11681 1.73424 5.62039 1.87811C6.12397 2.02198 6.58884 2.27702 6.98074 2.62444L7.00233 2.64369L7.02216 2.62619C7.39619 2.29795 7.83592 2.05324 8.31201 1.90839C8.7881 1.76354 9.28961 1.72188 9.78308 1.78619L9.92658 1.80719C10.5486 1.91459 11.13 2.1882 11.6092 2.59905C12.0884 3.0099 12.4476 3.5427 12.6487 4.14101C12.8498 4.73933 12.8853 5.3809 12.7516 5.99778C12.6178 6.61467 12.3198 7.1839 11.8889 7.64519L11.7839 7.75311L11.7559 7.77703L7.41008 12.0814C7.30979 12.1807 7.17692 12.2402 7.03609 12.249C6.89526 12.2578 6.75602 12.2153 6.64416 12.1293L6.58933 12.0814L2.21841 7.75194C1.75537 7.30141 1.42607 6.73151 1.26697 6.10535C1.10787 5.47919 1.12518 4.82122 1.317 4.20429C1.50881 3.58737 1.86763 3.03558 2.35372 2.61002C2.83981 2.18446 3.43421 1.90175 4.07108 1.79319Z" fill="#5C5C5C"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_24_1519">
+                <rect width="14" height="14" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                </span>
+            and a bit of
+            <span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_1522)">
+                    <path d="M2 6.33335C2.48417 6.70785 3.21158 6.9266 4.04167 6.91668C4.87175 6.9266 5.59917 6.70785 6.08333 6.33335C6.5675 5.95885 7.29492 5.7401 8.125 5.75002C8.95508 5.7401 9.6825 5.95885 10.1667 6.33335" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 4H10.1667V6.91667C10.1667 7.84492 9.79792 8.73516 9.14154 9.39154C8.48516 10.0479 7.59492 10.4167 6.66667 10.4167H5.5C4.57174 10.4167 3.6815 10.0479 3.02513 9.39154C2.36875 8.73516 2 7.84492 2 6.91667V4Z" fill="#5C5C5C" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0186 7.92349C10.2791 8.04308 10.565 8.09685 10.8511 8.08007C11.1373 8.06328 11.415 7.97646 11.6597 7.82723C11.9045 7.67799 12.1088 7.47093 12.2548 7.22422C12.4007 6.97752 12.4839 6.69874 12.4969 6.41238C12.5099 6.12602 12.4523 5.84085 12.3293 5.58194C12.2062 5.32303 12.0215 5.09832 11.7912 4.92754C11.561 4.75676 11.2924 4.64515 11.0089 4.60253C10.7254 4.5599 10.4358 4.58756 10.1656 4.68307" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_24_1522">
+                    <rect width="14" height="14" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </span>
+            by  DevPouria
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>   

@@ -1,0 +1,230 @@
+body{
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Arad";
+}
+.app{
+    width: 100%;
+    padding: 100px 50px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+.project-title{
+    font-size: 27px;
+    font-weight: 600;
+}
+.project-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.project-subtitle{
+    font-size: 20px;
+
+}
+.project-description{
+    opacity: .6;
+    border-top: 1px solid #7c7c7c;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.project-languages span{
+    display: inline-block;
+   padding: 4px 16px;
+    border-radius: 5px;
+    margin: 4px;
+
+}
+.languages-html{
+    margin-left: 0px !important;
+    background:  rgba(243,99,46,0.2);
+    color: rgb(243,99,46);
+    background: linear-gradient(96deg, rgba(243,99,46,0.2) 51%, rgba(141,57,27,0.2) 100%); 
+    border: 1px solid rgba(243,99,46,0.2);
+}
+.languages-js{
+    margin-left: 0px !important;
+    background: rgba(247,212,121,0.2);
+    color: rgb(247,212,121);
+    background: linear-gradient(356deg, rgba(247,212,121,0.2) 51%, rgba(166,133,46,0.2) 100%); 
+    border: 1px solid rgba(247,212,121,0.2);
+}
+.languages-css{
+    margin-left: 0px !important;
+    background: rgba(62,135,181,0.2);
+    color: rgb(62,135,181);
+    background: linear-gradient(356deg, rgba(62,135,181,0.2) 51%, rgba(129,184,218,0.2) 100%); 
+    border: 1px solid rgba(62,135,181,0.2) ;
+}
+.box span{
+    display: inline-block;
+    height: 12px;
+}
+.box {
+    width: 100%;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 16px 0;
+}
+.box-yellow{
+    background: rgba(247,212,121,0.2);
+    color: #fff;
+    background: linear-gradient(356deg, rgba(247,212,121,0.1) 51%, rgba(166,133,46,0.05) 100%); 
+    border: 1px solid rgba(247,212,121,0.2);
+}
+.box-red{
+    background:rgba(252, 80, 77, 0.1);
+    color: #fff;
+    background: linear-gradient(90deg, rgba(252, 80, 77, 0.1) 51%, rgba(252, 80, 77, 0) 100%); 
+    border: 1px solid rgba(252, 80, 77, 0.5);
+}
+.box-red span{
+    color:  #FF0000;
+}
+.box-black{
+    background:rgba(104, 104, 104, 0.32);
+    color: #fff;
+    background: linear-gradient(90deg, rgba(104, 104, 104, 0.32) 51%,rgba(104, 104, 104, 0) 100%); 
+    border: 1px solid rgba(104, 104, 104, 0.5);
+}
+.box-black span{
+    color:  #686868;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.buttons .btn{
+    border: none;
+   text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    align-items: center;
+    
+    border-radius: 4px;
+}
+.btn-youtebe{
+    background-color: #FC504D;
+}
+.btn-github{
+    background-color: #686868;
+}
+.social-list{
+    background-color: #F7D479;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+    margin: 16px 0;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.list-icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.list-icon svg{
+    width: 20px;
+    height: 20px;
+}
+.copyright-text{
+    color: #5C5C5C;
+    text-align: center;
+}
+.copyright-text span{
+   display: inline-block;
+}
+
+
+.box-refresh{
+    background-color:#1A1A1A ;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .3s;
+}
+
+.box-refresh.hidden{
+    overflow: hidden;
+}
+
+.box--icon-refresh{
+   
+    padding: 2px;
+    border-radius: 100px;
+    transition: all .2s;
+}
+.box--icon-refresh.isLoading{
+    padding: 10px;
+    background-color: #F7D479;
+}
+.box--icon-refresh.isLoading .icon-refresh path{
+    stroke: #000;
+}
+
+.icon-refresh{
+    transition: all .3s;
+    transform: scale(40%) rotate(0deg);
+    
+}
+.icon-refresh.iconRotate{
+    animation: iconRotate 1s  linear infinite;
+}
+
+@keyframes iconRotate {
+    0%{
+        transform:scale(1.5) rotate(0deg);
+    }
+    100%{
+        transform:scale(1.5) rotate(360deg);
+    }
+}
+
+
+.load{
+    transition: all .6s;
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+.box-refresh .icon-check{
+    display: none;
+}
+.endLoading1 {
+    padding: 10px;
+    background-color: #65D3B7;
+}
+.endLoading2{
+   
+    padding: 300px;
+    border-radius: 1000px;
+    opacity: 0;
+}
+
+.endLoading1 .icon-check{
+    display: block;
+
+}
+
+.endLoading1 .icon-refresh{
+    display: none;
+}
+
+.icon-check path{
+    stroke: #033d2f;
+  
+}
